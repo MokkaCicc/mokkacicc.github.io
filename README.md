@@ -1,2 +1,2 @@
-# mokkacicc.github.page
+# mokkacicc.github.io
 Personal website
