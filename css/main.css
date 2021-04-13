@@ -1,129 +1,139 @@
 @font-face {
 	font-family: "Fira Code";
-	src: url("/fonts/FiraCode-VF.ttf") format("ttf");
+	src: url("/fonts/FiraCode-Medium.woff2") format("woff2");
+	font-weight: 500;
 }
 
-:root{
+@font-face {
+	font-family: "Fira Code";
+	src: url("/fonts/FiraCode-Bold.woff2") format("woff2");
+	font-weight: 700;
+}
+
+:root {
 	--main-bg-color: #121212;
 	--main-text-color: white;
 	--secondary-text-color: gray;
 	--accent-color: #7232f2;
 }
 
-*, *:before, *:after
-{
+*, *:before, *:after {
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
-html
-{
-	background-color: var(--main-bg-color);
-	font-family: "Fira Code";
-	font-weight: 500;
-}
-
-body
-{
-	color: var(--main-text-color);
-}
-
-article
-{
-	padding-top: 5%;
-	justify-content: center;
-	width: 400px;
-	margin: auto;
-}
-
-article h1
-{
-	font-size: 2em;
-	margin-left: -1.2em;
-}
-
-article h1::before
-{
-	content: "# ";
-	color: var(--accent-color);
-}
-
-article p
-{
-	text-align: justify;
-	font-size: 1em;
-}
-
-article a
-{
-	text-decoration: none;
-	text-decoration-line: underline;
-	color: var(--accent-color);
-}
-
-#lang
-{
-	margin: 0px;
-	padding: 10px;
+html {
+	/* If I put 100% the page is taller than the screen (why?) */
+	height: 98%;
 	width: 100%;
+
+	background-color: var(--main-bg-color);
+	color: var(--main-text-color);
+	font-family: "Fira Code";
+	font-size: 1em;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+
+header {
+	height: 50px;
+	width: 100%;
+	padding-top: 10px;
+
 	display: flex;
 	justify-content: flex-end;
 }
 
-#lang a
-{
-	font-weight: 700;
-	font-size: 1em;
-	margin-left: 5px;
-	margin-right: 5px;
-	color: var(--secondary-text-color);
+header a {
+	padding-left: 5px;
+	padding-right: 5px;
+	
 	text-decoration: none;
+	color: var(--secondary-text-color);
+	font-size: 1em;
+	font-weight: 700;
 }
 
-#lang .actif
-{
+header .actif {
 	text-decoration-line: underline;
 }
 
-#lang a:hover
-{
+header a:hover {
 	color: var(--accent-color)
 }
 
-#contacts
-{
-	margin: 0px;
-	position: absolute;
-	left:0px;
-	bottom: 40px;
-	width: 100%;
+#content {
+	flex-grow: 1;
+	max-width: 500px;
+	margin: auto;
+}
+
+#content h1 {
+	padding-top: 10%;
+	margin-left: -0.9em;
+
+	font-size: 2em;
+}
+
+#content h1::before {
+	margin-right: 10px;
+
+	content: "#";
+	color: var(--accent-color);
+	font-weight: 500;
+}
+
+#content p {
+	text-align: justify;
+	text-justify: inter-word;
+	font-size: 1em;
+}
+
+#content a {
+	text-decoration: none;
+	text-decoration-line: underline;
+	color: var(--accent-color);
+}
+
+footer {
+	height: 50px;
+}
+
+#contacts {
 	display: flex;
+	width: 100%;
+
 	justify-content: center;
 }
 
-#contacts img
-{
-	/* https://codepen.io/sosuke/pen/Pjoqqp */
-	filter: invert(47%) sepia(0%) saturate(1389%) hue-rotate(241deg) brightness(106%) contrast(113%);
+#contacts img {
 	height: 30px;
 	width: 30px;
 	margin-left: 10px;
 	margin-right: 10px;
+
+	/* https://codepen.io/sosuke/pen/Pjoqqp */
+	filter: invert(47%) sepia(0%) saturate(1389%) hue-rotate(241deg) brightness(106%) contrast(113%);
 }
 
-#contacts img:hover
-{
+#contacts img:hover {
 	filter: invert(37%) sepia(89%) saturate(7178%) hue-rotate(256deg) brightness(96%) contrast(97%);
 }
 
-#copyrights
-{
-	font-size: 0.8em;
-	margin: 0px;
-	position: absolute;
-	left:0px;
-	bottom: 0px;
-	width: 100%;
-	text-align: center;
+#copyrights {
 	height: 30px;
-	color: gray;
+
+	font-size: 0.8em;
+	text-align: center;
+	color: var(--secondary-text-color);
 }
