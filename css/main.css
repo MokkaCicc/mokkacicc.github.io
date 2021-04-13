@@ -1,0 +1,129 @@
+@font-face {
+	font-family: "Fira Code";
+	src: url("/fonts/FiraCode-VF.ttf") format("ttf");
+}
+
+:root{
+	--main-bg-color: #121212;
+	--main-text-color: white;
+	--secondary-text-color: gray;
+	--accent-color: #7232f2;
+}
+
+*, *:before, *:after
+{
+	box-sizing: border-box;
+}
+
+html
+{
+	background-color: var(--main-bg-color);
+	font-family: "Fira Code";
+	font-weight: 500;
+}
+
+body
+{
+	color: var(--main-text-color);
+}
+
+article
+{
+	padding-top: 5%;
+	justify-content: center;
+	width: 400px;
+	margin: auto;
+}
+
+article h1
+{
+	font-size: 2em;
+	margin-left: -1.2em;
+}
+
+article h1::before
+{
+	content: "# ";
+	color: var(--accent-color);
+}
+
+article p
+{
+	text-align: justify;
+	font-size: 1em;
+}
+
+article a
+{
+	text-decoration: none;
+	text-decoration-line: underline;
+	color: var(--accent-color);
+}
+
+#lang
+{
+	margin: 0px;
+	padding: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#lang a
+{
+	font-weight: 700;
+	font-size: 1em;
+	margin-left: 5px;
+	margin-right: 5px;
+	color: var(--secondary-text-color);
+	text-decoration: none;
+}
+
+#lang .actif
+{
+	text-decoration-line: underline;
+}
+
+#lang a:hover
+{
+	color: var(--accent-color)
+}
+
+#contacts
+{
+	margin: 0px;
+	position: absolute;
+	left:0px;
+	bottom: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#contacts img
+{
+	/* https://codepen.io/sosuke/pen/Pjoqqp */
+	filter: invert(47%) sepia(0%) saturate(1389%) hue-rotate(241deg) brightness(106%) contrast(113%);
+	height: 30px;
+	width: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#contacts img:hover
+{
+	filter: invert(37%) sepia(89%) saturate(7178%) hue-rotate(256deg) brightness(96%) contrast(97%);
+}
+
+#copyrights
+{
+	font-size: 0.8em;
+	margin: 0px;
+	position: absolute;
+	left:0px;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	height: 30px;
+	color: gray;
+}
