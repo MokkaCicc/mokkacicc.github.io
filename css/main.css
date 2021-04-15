@@ -74,7 +74,7 @@ header a:hover {
 
 #content {
 	flex-grow: 1;
-	max-width: 500px;
+	max-width: 400px;
 	margin: auto;
 }
 
