@@ -30,7 +30,7 @@ html {
 
 	background-color: var(--main-bg-color);
 	color: var(--main-text-color);
-	font-family: "Fira Code";
+	font-family: "Fira Code", "San Francisco Mono", "Cascadia Code", "Cascadia Mono", "Ubuntu Mono", "Roboto Mono", "Menlo", "Monaco", "Consolas", monospace;
 	font-size: 1em;
 	font-weight: 500;
 	line-height: 1.5;
